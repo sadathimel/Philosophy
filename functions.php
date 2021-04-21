@@ -39,6 +39,8 @@ if (site_url() == "http://demo.lwhh.com") {
 			)
 		);
  	add_editor_style("/assets/css/editor-style.css");
+
+ 	register_nav_menu("topmenu",__("Top Menu", "philosophy"));
  }
 
  add_action( 'after_setup_theme', 'philosophy_after_setup_theme');
