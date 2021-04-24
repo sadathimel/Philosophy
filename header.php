@@ -79,8 +79,6 @@
                         <div class="entry" style="background-image:url('<?php echo get_template_directory_uri(); ?>/assets/images/thumbs/featured/featured-guitarman.jpg');">
                             
                             <div class="entry__content">
-                                <span class="entry__category"><a href="#0">Music</a></span>
-
                                 <h1><a href="#0" title="">What Your Music Preference Says About You and Your Personality.</a></h1>
 
                                 <div class="entry__info">
