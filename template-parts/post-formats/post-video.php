@@ -7,26 +7,6 @@
         </a>
     </div>
 
-    <div class="entry__text">
-        <div class="entry__header">
-            
-            <div class="entry__date">
-                <a href="single-video.html">December 10, 2017</a>
-            </div>
-            <h1 class="entry__title"><a href="single-video.html">Key Benefits Of Family Photography.</a></h1>
-            
-        </div>
-        <div class="entry__excerpt">
-            <p>
-                Lorem ipsum Sed eiusmod esse aliqua sed incididunt aliqua incididunt mollit id et sit proident dolor nulla sed commodo est ad minim elit reprehenderit nisi officia aute incididunt velit sint in aliqua...
-            </p>
-        </div>
-        <div class="entry__meta">
-            <span class="entry__meta-links">
-                <a href="category.html">Family</a> 
-                <a href="category.html">Photography</a>
-            </span>
-        </div>
-    </div>
+    <?php get_template_part("template_parts/common/post/summary"); ?>
 
 </article> <!-- end article -->

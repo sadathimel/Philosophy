@@ -17,26 +17,6 @@
         </div>
     </div>
 
-    <div class="entry__text">
-        <div class="entry__header">
-            
-            <div class="entry__date">
-                <a href="single-gallery.html">December 10, 2017</a>
-            </div>
-            <h1 class="entry__title"><a href="single-gallery.html">Workspace Design Trends and Ideas.</a></h1>
-            
-        </div>
-        <div class="entry__excerpt">
-            <p>
-                Lorem ipsum Sed eiusmod esse aliqua sed incididunt aliqua incididunt mollit id et sit proident dolor nulla sed commodo est ad minim elit reprehenderit nisi officia aute incididunt velit sint in aliqua...
-            </p>
-        </div>
-        <div class="entry__meta">
-            <span class="entry__meta-links">
-                <a href="category.html">Work</a> 
-                <a href="category.html">Management</a>
-            </span>
-        </div>
-    </div>
+    <?php get_template_part( "template-parts/common/post/summary" ); ?>
 
 </article> <!-- end article -->
