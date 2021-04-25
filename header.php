@@ -70,6 +70,8 @@
         </header> <!-- header -->
 
 
-        <?php get_template_part( 'template-parts/blog-home/featured' ); ?>
+       <?php get_template_part( "template-parts/blog-home/featured"); ?>
+
+
 
     </section> <!-- end s-pageheader -->
