@@ -43,6 +43,8 @@ if (site_url() == "http://demo.lwhh.com") {
  	add_editor_style("/assets/css/editor-style.css");
 
  	register_nav_menu("topmenu", __("Top Menu", "philosophy"));
+
+ 	add_image_size( "philosophy-home-square",400,400, true);
  }
 
  add_action( 'after_setup_theme', 'philosophy_after_setup_theme');
@@ -66,5 +68,12 @@ if (site_url() == "http://demo.lwhh.com") {
  }
 
 add_action('wp_enqueue_scripts', 'philosophy_assets');
+
+
+function philosophy_pagination(){
+	echo paginate_links( array(
+
+	) );
+}
  
  
