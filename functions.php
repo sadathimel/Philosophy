@@ -1,6 +1,7 @@
 <?php
 
 require_once(get_theme_file_path('inc/tgm.php'));
+require_once(get_theme_file_path('inc/attachments.php'));
 
 if (site_url() == "http://demo.lwhh.com") {
     define("VERSION", time());
@@ -44,7 +45,7 @@ if (site_url() == "http://demo.lwhh.com") {
 
  	register_nav_menu("topmenu", __("Top Menu", "philosophy"));
 
- 	add_image_size( "philosophy-home-square",400,400, true);
+ 	add_image_size( "philosophy-home-square", 400, 400, true);
  }
 
  add_action( 'after_setup_theme', 'philosophy_after_setup_theme');
