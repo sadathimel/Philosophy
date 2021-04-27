@@ -57,10 +57,24 @@ get_header();
                         </p>
 
                         <ul class="s-content__author-social">
-                           <li><a href="#0">Facebook</a></li>
-                           <li><a href="#0">Twitter</a></li>
-                           <li><a href="#0">GooglePlus</a></li>
-                           <li><a href="#0">Instagram</a></li>
+                            <?php 
+                            $philosopy_author_facebook = get_field("facebook", "user_".get_the_author_meta('ID'));
+                            $philosopy_author_twitter  = get_field("twitter", "user_".get_the_author_meta('ID'));
+                            $philosopy_author_instagram = get_field("instagram", "user_".get_the_author_meta('ID'));
+                            ?>
+
+                            <?php if($philosopy_author_facebook): ?>
+                            <li><a href="<?php echo esc_url($philosopy_author_facebook); ?>">Facebook</a></li>
+                            <?php endif; ?>
+
+                            <?php if($philosopy_author_twitter): ?>
+                            <li><a href="<?php echo esc_url($philosopy_author_twitter); ?>">Twitter</a></li>
+                            <?php endif; ?>
+
+                            <?php if($philosopy_author_instagram): ?>
+                            <li><a href="<?php echo esc_url($philosopy_author_instagram); ?>">instagram</a></li>
+                            <?php endif; ?>
+
                         </ul>
                     </div>
                 </div>
