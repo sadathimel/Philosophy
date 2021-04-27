@@ -1,6 +1,6 @@
 <?php 
 	$philosophy_audio_file = "";
-	if (function_exists(the_field)) {
+	if (function_exists("the_field")) {
 		$philosophy_audio_file = get_field("sourch_file");
 	}
  ?>
