@@ -4010,7 +4010,7 @@ footer h4::after {
    padding-left: 14%;
 }
 
-.comment__avatar {
+.comment__avatar,.comment-author {
    position: absolute;
    left: 0;
    display: block;
@@ -4018,7 +4018,7 @@ footer h4::after {
    width: 6rem;
 }
 
-.comment__avatar img {
+.comment__avatar img,.comment-author img {
    margin-top: 0.6rem;
    height: 6rem;
    width: 6rem;
