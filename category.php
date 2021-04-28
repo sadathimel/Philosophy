@@ -5,11 +5,29 @@
     <!-- s-content
     ================================================== -->
     <section class="s-content">
+
+        <div class="row narrow">
+            <div class="col-full s-content__header" data-aos="fade-up">
+                <h1>
+                    <?php single_cat_title( ); ?>
+                </h1>
+
+                <p class="lead">
+                    <?php echo category_description(); ?>
+                </p>
+            </div>
+        </div>
         
         <div class="row masonry-wrap">
             <div class="masonry">
 
                 <div class="grid-sizer"></div>
+
+                <?php 
+                    if ( !have_posts()):
+                ?>
+                    <h5><?php echo esc_html(("There is no post in this category.", "philosophy")); ?></h5>
+                 <?php endif;?>
 
                 <?php 
                     while (have_posts()) {
