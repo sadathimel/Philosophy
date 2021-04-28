@@ -21,7 +21,7 @@
 
     <!-- pageheader
     ================================================== -->
-    <section class="s-pageheader <?php if(is_home()) "s-pageheader--home"?>">
+    <section class="s-pageheader <?php if(is_home())echo "s-pageheader--home" ?>">
 
         <header class="header">
             <div class="header__content row">
