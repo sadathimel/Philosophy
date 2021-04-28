@@ -24,10 +24,10 @@
                 <div class="grid-sizer"></div>
 
                 <?php 
-                    if ( !have_posts()):
+                    if (!have_posts()):
                 ?>
-                    <h5><?php echo esc_html(("There is no post in this category.", "philosophy")); ?></h5>
-                 <?php endif;?>
+                    <h5 class="text-center"><?php _e("There is no post in this category.", "philosophy"); ?></h5>
+                 <?php endif; ?>
 
                 <?php 
                     while (have_posts()) {
