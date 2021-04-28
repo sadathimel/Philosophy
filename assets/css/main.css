@@ -4010,7 +4010,7 @@ footer h4::after {
    padding-left: 14%;
 }
 
-.comment__avatar,.comment-author {
+.comment__avatar {
    position: absolute;
    left: 0;
    display: block;
@@ -4018,14 +4018,14 @@ footer h4::after {
    width: 6rem;
 }
 
-.comment__avatar img,.comment-author img {
+.comment__avatar img {
    margin-top: 0.6rem;
    height: 6rem;
    width: 6rem;
    border-radius: 100%;
 }
 
-.comment__info cite {
+.comment__info cite{
    font-family: "metropolis-bold", sans-serif;
    font-size: 1.9rem;
    line-height: 1.263;
@@ -4033,7 +4033,7 @@ footer h4::after {
    color: #151515;
 }
 
-.comment__meta {
+.comment__meta{
    font-family: "metropolis-regular", sans-serif;
    font-size: 1.45rem;
    line-height: 3rem;
@@ -4068,7 +4068,7 @@ footer h4::after {
 
 /* comments form
  * ---------------------------- */
-#comments .respond {
+#comments .respond{
    padding-top: 4.2rem;
 }
 
