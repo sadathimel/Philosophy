@@ -41,6 +41,16 @@ get_header();
                     dynamic_sidebar( "cantact-info" );
                 } ?>
             </div>
+
+            <h3>Say Hello.</h3>
+
+            <div>
+                <?php 
+                    if (get_field('contact _form_shortcode')){ 
+                        echo do_shortcode(get_field('contact _form_shortcode'));
+                    }
+                ?>
+            </div>
                 
             </div> <!-- end s-content__main -->
 
