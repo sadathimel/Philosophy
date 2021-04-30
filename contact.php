@@ -42,7 +42,7 @@ get_header();
                 } ?>
             </div>
 
-            <h3>Say Hello.</h3>
+            <h3><?php _e("Say Hello.","philosophy"); ?></h3>
 
             <div>
                 <?php 
