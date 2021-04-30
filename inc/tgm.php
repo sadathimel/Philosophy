@@ -75,6 +75,11 @@ function philosophy_register_required_plugins() {
 			'slug'      => 'wp-google-maps',
 			'required'  => false,
 		),
+		array(
+			'name'      => 'Contact form 7',
+			'slug'      => 'contact-form-7',
+			'required'  => false,
+		),
 
 		
 
