@@ -31,7 +31,7 @@
                         if (has_custom_logo()) {
                             the_custom_logo();
                         }else{
-                            echo "<h1>".get_bloginfo("name")."</h1>";
+                            echo "<h1><a href='".home_url("/")."'>".get_bloginfo("name")."</a></h1>";
                         }
                      ?>
                 </div> <!-- end header__logo -->
