@@ -46,6 +46,12 @@ if (site_url() == "http://demo.lwhh.com") {
 
  	register_nav_menu("topmenu", __("Top Menu", "philosophy"));
 
+    register_nav_menus(array(
+        "footer_left" => __("Footer Left Menu","philosophy"),
+        "footer_middle" => __("Footer Middle Menu","philosophy"),
+        "footer_right" => __("Footer Right Menu","philosophy")
+    ));
+
  	add_image_size( "philosophy-home-square", 400, 400, true);
  }
 
@@ -110,6 +116,7 @@ function philosophy_widgets(){
         'before_title'  => '',
         'after_title'   => '',
     ) );
+
     register_sidebar( array(
         'name'          => __( 'Contact Page info', 'philosophy' ),
         'id'            => 'cantact-info',
@@ -119,6 +126,7 @@ function philosophy_widgets(){
         'before_title'  => '<h3 class="quarter-top-margin">',
         'after_title'   => '</h3>',
     ) );
+
     register_sidebar( array(
         'name'          => __( 'Before Footer Section', 'philosophy' ),
         'id'            => 'before_footer_section',
@@ -127,6 +135,26 @@ function philosophy_widgets(){
         'after_widget'  => '</div>',
         'before_title'  => '<h3 ">',
         'after_title'   => '</h3>',
+    ) );
+
+    register_sidebar( array(
+        'name'          => __( 'Footer Section', 'philosophy' ),
+        'id'            => 'footer_right',
+        'description'   => __( 'footer section right site', 'philosophy' ),
+        'before_widget' => '<div id="%1$s" "%2$s">',
+        'after_widget'  => '</div>',
+        'before_title'  => '<h4>',
+        'after_title'   => '</h4>',
+    ) );
+
+    register_sidebar( array(
+        'name'          => __( 'Footer Bottom Section', 'philosophy' ),
+        'id'            => 'footer-bottom',
+        'description'   => __( 'footer bottom section', 'philosophy' ),
+        'before_widget' => '<div id="%1$s" "%2$s">',
+        'after_widget'  => '</div>',
+        'before_title'  => '',
+        'after_title'   => '',
     ) );
 }
 add_action("widgets_init", "philosophy_widgets");
