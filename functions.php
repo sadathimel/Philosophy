@@ -17,6 +17,7 @@ if (site_url() == "http://demo.lwhh.com") {
  function philosophy_after_setup_theme(){
  	load_theme_textdomain('philosophy');
  	add_theme_support( 'post-thumbnails' );
+    add_theme_support( 'custom-logo' );
  	add_theme_support('title-tag');
  	add_theme_support( 
  		'html5', 
@@ -155,6 +156,16 @@ function philosophy_widgets(){
         'after_widget'  => '</div>',
         'before_title'  => '',
         'after_title'   => '',
+    ) );
+
+    register_sidebar( array(
+        'name'          => __( 'Header Section', 'philosophy' ),
+        'id'            => 'header-social-link',
+        'description'   => __( 'Widgets in this area will be shown on all contact page.', 'philosophy' ),
+        'before_widget' => '<div id="%1$s" class=" %2$s">',
+        'after_widget'  => '</div>',
+        'before_title'  => '<h3>',
+        'after_title'   => '</h3>',
     ) );
 }
 add_action("widgets_init", "philosophy_widgets");
