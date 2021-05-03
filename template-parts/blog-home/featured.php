@@ -22,7 +22,7 @@ while ($philosophy_fp->have_posts()) {
         'permalink'     => get_permalink(),    
         'thumbnail'     => get_the_post_thumbnail_url(get_the_ID(), 'large' ),
         'author'        => get_the_author_meta('display_name'),
-        'author_url'        => get_the_author_post_url(get_the_author_meta('ID')),
+        'author_url'    => get_the_author_post_url(get_the_author_meta('ID')),
         'author_avator' => get_avatar_url(get_the_author_meta('ID')),
         'cat'           => $category->name,
         'catlink'       => get_category_link( $category )
