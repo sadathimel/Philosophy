@@ -212,3 +212,8 @@ function beginnig_category_page($category_title){
 }
 add_action('philosophy_category_page','beginnig_category_page');    
 
+
+function capital_text($text){
+    return strtoupper($text);
+}
+add_filter('philosophy_text','capital_text');
