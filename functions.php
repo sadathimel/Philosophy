@@ -186,3 +186,13 @@ function philosophy_search_form($form){
     return $newform;
 }
 add_filter( 'get_search_form', 'philosophy_search_form' );
+
+function before_category_title(){
+    echo "<p>Before title</p>";
+}
+add_action( 'philosophy_before_category_titel', 'before_category_title' );
+
+function after_category_title(){
+    echo "<p>After title</p>";
+}
+add_action( 'philosophy_after_category_titel', 'after_category_title' );

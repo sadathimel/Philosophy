@@ -81,7 +81,7 @@ class LwhhSocialIcons_Widget extends WP_Widget {
     public function update( $new_instance, $old_instance ) {
         $instance                = array();
         $instance['title']       = strip_tags( $new_instance['title'] );
-        $instance['classname']       = strip_tags( $new_instance['classname'] );
+        $instance['classname']   = strip_tags( $new_instance['classname'] );
         $instance['facebook']    = strip_tags( $new_instance['facebook'] );
         $instance['twitter']     = strip_tags( $new_instance['twitter'] );
         $instance['github']      = strip_tags( $new_instance['github'] );
