@@ -196,3 +196,8 @@ function after_category_title(){
     echo "<p>After title</p>";
 }
 add_action( 'philosophy_after_category_titel', 'after_category_title' );
+
+function after_category_discription(){
+    echo "<p>After category Description</p>";
+}
+add_action('philosophy_after_category_description','after_category_discription');
