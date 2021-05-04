@@ -187,10 +187,20 @@ function philosophy_search_form($form){
 }
 add_filter( 'get_search_form', 'philosophy_search_form' );
 
-function before_category_title(){
-    echo "<p>Before title</p>";
+function before_category_title1(){
+    echo "<p>Before title1</p>";
 }
-add_action( 'philosophy_before_category_titel', 'before_category_title' );
+add_action( 'philosophy_before_category_titel', 'before_category_title1' );
+
+function before_category_title2(){
+    echo "<p>Before title2</p>";
+}
+add_action( 'philosophy_before_category_titel', 'before_category_title3',99 );
+
+function before_category_title3(){
+    echo "<p>Before title3</p>";
+}
+add_action( 'philosophy_before_category_titel', 'before_category_title2' );
 
 function after_category_title(){
     echo "<p>After title</p>";
