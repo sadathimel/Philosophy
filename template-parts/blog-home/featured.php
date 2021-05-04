@@ -25,7 +25,7 @@ while ($philosophy_fp->have_posts()) {
         'author_url'    => get_the_author_post_url(get_the_author_meta('ID')),
         'author_avator' => get_avatar_url(get_the_author_meta('ID')),
         'cat'           => $category->name,
-        'catlink'       => get_category_link( $category )
+        'catlink'       => get_category_link( $category ),
     );
 }
 
@@ -65,7 +65,7 @@ if ($philosophy_fp->post_count > 1):
                     <div class="featured__column featured__column--small">
 
                         <?php 
-                            for ($i=1; $i < 3  ; $i++):
+                            for ($i=1; $i < 3; $i++):
                          ?>
 
                         <div class="entry" style="background-image:url('<?php echo esc_url($post_data[$i]['thumbnail']); ?>');">

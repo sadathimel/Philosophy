@@ -207,6 +207,11 @@ function after_category_title(){
 }
 add_action( 'philosophy_after_category_titel', 'after_category_title' );
 
+remove_action('philosophy_after_category_titel', 'after_category_title');
+remove_action('philosophy_before_category_titel', 'before_category_title2' );
+remove_action( 'philosophy_before_category_titel', 'before_category_title3',99);
+remove_action('philosophy_before_category_titel', 'before_category_title1' );
+
 function after_category_discription(){
     echo "<p>After category Description</p>";
 }
