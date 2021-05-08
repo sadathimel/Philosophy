@@ -247,3 +247,17 @@ function pagination_mid_size($size){
     return 2;
 }
 add_filter('pagination_philosophy_mid_size','pagination_mid_size');
+
+
+
+
+add_action ( 'category_edit_form_fields', function( $tag ){
+    $cat_title = get_term_meta( $tag->term_id, '_pagetitle', true ); ?>
+    <tr class='form-field'>
+        <th scope='row'><label for='cat_page_title'><?php _e('Category Page Title'); ?></label></th>
+        <td>
+            <input type='text' name='cat_title' id='cat_title' value='<?php echo $cat_title ?>'>
+            <p class='description'><?php _e('Title for the Category '); ?></p>
+        </td>
+    </tr> <?php
+});
