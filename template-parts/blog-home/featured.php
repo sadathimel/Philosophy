@@ -65,7 +65,7 @@ if ($philosophy_fp->post_count > 1):
                     <div class="featured__column featured__column--small">
 
                         <?php 
-                            for ($i=1; $i < 3; $i++):
+                            for ($i=1; $i < 3; $i++){
                          ?>
 
                         <div class="entry" style="background-image:url('<?php echo esc_url($post_data[$i]['thumbnail']); ?>');">
@@ -93,7 +93,7 @@ if ($philosophy_fp->post_count > 1):
                         </div> <!-- end entry -->
 
                         <?php 
-                            endfor;
+                           }
                          ?>
 
                     </div> <!-- end featured__small -->

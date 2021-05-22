@@ -3,8 +3,6 @@
 the_post(); 
 get_header(); 
 ?>
-
-
     <!-- s-content
     ================================================== -->
     <section class="s-content s-content--narrow s-content--no-padding-bottom">
