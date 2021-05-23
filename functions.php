@@ -68,12 +68,12 @@ if (site_url() == "http://demo.lwhh.com") {
  	wp_enqueue_style( 'base-css', get_theme_file_uri('/assets/css/base.css'), null, '1.0' );
  	wp_enqueue_style( 'vendor-css', get_theme_file_uri('/assets/css/vendor.css'), null, '1.0' );
  	wp_enqueue_style( 'main-css', get_theme_file_uri('/assets/css/main.css'), null, '1.0' );
- 	wp_enqueue_style('philosophy-style-css', get_stylesheet_uri(),null, VERSION);
+ 	wp_enqueue_style( 'philosophy-style-css', get_stylesheet_uri(),null, VERSION);
 
- 	wp_enqueue_script('modernizr-js', get_theme_file_uri('/assets/js/modernizr.js'), '1.0');
- 	wp_enqueue_script('pace-min-js', get_theme_file_uri('/assets/js/pace.min.js'), '1.0');
- 	wp_enqueue_script('plugins-js', get_theme_file_uri('/assets/js/plugins.js'), array('jquery'), '1.0',true);
- 	wp_enqueue_script('main-js', get_theme_file_uri('/assets/js/main.js'), array('jquery'), '1.0',true);
+ 	wp_enqueue_script( 'modernizr-js', get_theme_file_uri('/assets/js/modernizr.js'), '1.0');
+ 	wp_enqueue_script( 'pace-min-js', get_theme_file_uri('/assets/js/pace.min.js'), '1.0');
+ 	wp_enqueue_script( 'plugins-js', get_theme_file_uri('/assets/js/plugins.js'), array('jquery'), '1.0',true);
+ 	wp_enqueue_script( 'main-js', get_theme_file_uri('/assets/js/main.js'), array('jquery'), '1.0',true);
  }
 
 add_action('wp_enqueue_scripts', 'philosophy_assets');
