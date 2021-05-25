@@ -76,7 +76,7 @@ function philosophy_register_required_plugins() {
 			'required'  => false,
 		),
 		array(
-			'name'      => 'Contact form 7',
+			'name'      => 'Contact Form 7',
 			'slug'      => 'contact-form-7',
 			'required'  => false,
 		),
