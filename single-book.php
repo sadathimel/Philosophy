@@ -61,7 +61,17 @@ get_header();
                     <span>Post Tags</span>
 
                     <span class="s-content__tag-list">
-                        <?php echo get_the_tag_list(); ?>
+                        <?php the_tags("","",""); ?>
+                    </span>
+                </p> <!-- end s-content__tags -->
+
+                <p class="s-content__tags">
+                    <span><?php _e("Language",'philosophy' ); ?></span>
+
+                    <span class="s-content__tag-list">
+                        <?php 
+                            the_terms(get_the_ID(),'language');
+                         ?>
                     </span>
                 </p> <!-- end s-content__tags -->
 

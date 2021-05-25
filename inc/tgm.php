@@ -86,6 +86,11 @@ function philosophy_register_required_plugins() {
 			'required'  => true,
 			'source'	=> 'https://github.com/CMB2/cmb2-attached-posts/archive/refs/heads/master.zip'
 		),
+		array(
+			'name'      => 'CMB2',
+			'slug'      => 'CMB2',
+			'required'  => false,
+		),
 
 		
 
