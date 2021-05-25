@@ -42,7 +42,11 @@ get_header();
                  );
 
                  $philosophy_chapters = new WP_Query($philosophy_chargs);
-                 echo $philosophy_chapters->found_posts;
+                 // echo $philosophy_chapters->found_posts;
+                 echo "<h3>";
+                 _e('Chapter','philosophy');
+                 echo "</h3>";
+
                  while ($philosophy_chapters->have_posts()) {
                      $philosophy_chapters->the_post();
                      $philosophy_chl = get_the_permalink();
