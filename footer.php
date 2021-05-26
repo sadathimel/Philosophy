@@ -55,7 +55,15 @@
 
         <div class="row bottom tags-wrap">
             <div class="col-full tags">
-                <h3>Tags</h3>
+
+                <?php 
+                    $philosophy_footer_tag_heading = apply_filters('philosophy_footer_tag_heading',__('Tag','philosophy'));
+                    $philosophy_footer_tag_items   = apply_filters(' ')
+                 ?>
+                <h3>
+                    <?php echo esc_html($philosophy_footer_tag_heading); ?>
+                        
+                </h3>
 
                 <div class="tagcloud">
 
