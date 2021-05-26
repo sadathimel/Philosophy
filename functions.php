@@ -277,7 +277,7 @@ function philosophy_cpt_slug_fix($post_link,$id){
     $p = get_post($id);
     if (is_object($p) && 'chapter' == get_post_type($id)) {
         $parent_post_id = get_field('parent_book');
-        $parent_post = get_post($parent_post_id);
+        $parent_post    = get_post($parent_post_id);
         if ($parent_post) {
             $post_link = str_replace("%book%",$parent_post->post_name,$post_link);
         }
@@ -286,3 +286,59 @@ function philosophy_cpt_slug_fix($post_link,$id){
     return $post_link; 
 }
 add_filter('post_type_link', 'philosophy_cpt_slug_fix',1,2 );
+
+
+function philosophy_footer_language_heading($title)
+{
+    if (is_post_type_archive('book')) {
+        $title = __('Language','philosophy');
+    }
+    return $title;
+}
+add_filter( 'philosophy_footer_tag_heading', 'philosophy_footer_language_heading' );
+
+
+function philosophy_footer_language_items($tags)
+{
+    if (is_post_type_archive('book')) {
+        $tags = get_terms(array(
+            'taxonomy'   => 'language',
+            'hide_empty' => false
+        ));
+    }
+    return $tags;
+}
+add_filter( 'philosophy_footer_tag_items', 'philosophy_footer_language_items' );
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
