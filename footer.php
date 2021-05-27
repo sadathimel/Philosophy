@@ -10,9 +10,9 @@
                 <div class="block-1-2 block-m-full popular__posts">
                     <?php
                     $philosophy_popular_post = new WP_Query(array(
-                    	"posts_per_page" => 6,
-                    	"ignore_sticky_posts" => 1,
-                    	"orderby" => "comment_count",
+                        "posts_per_page"      => 6,
+                        "ignore_sticky_posts" => 1,
+                        "orderby"             => "comment_count",
 
                     ));
 
@@ -94,11 +94,11 @@
                     <h4><?php _e("Quick Links", "philosophy");?></h4>
 
                     <?php
-                    wp_nav_menu(array(
-                    	"theme_location" => "footer_left",
-                    	"menu_id" => "footerleft",
-                    	"menu_class" => "s-footer__linklist",
-                    ));
+                        wp_nav_menu(array(
+                            "theme_location" => "footer_left",
+                            "menu_id"        => "footerleft",
+                            "menu_class"     => "s-footer__linklist",
+                        ));
                     ?>
 
                 </div> <!-- end s-footer__sitelinks -->
@@ -109,9 +109,9 @@
 
                     <?php
                         wp_nav_menu(array(
-                        	'theme_location' => 'footer_middle',
-                        	'menu_id' => 'footerright',
-                        	'menu_class' => 's-footer__linklist',
+                            'theme_location' => 'footer_middle',
+                            'menu_id'        => 'footerright',
+                            'menu_class'     => 's-footer__linklist',
 
                         ));
                         ?>
@@ -123,12 +123,12 @@
                     <h4><?php _e("Social", "philosophy");?></h4>
 
                     <?php
-                    wp_nav_menu(array(
-                    	'theme_location' => 'footer_right',
-                    	'menu_id' => 'footerright',
-                    	'menu_class' => 's-footer__linklist',
+                        wp_nav_menu(array(
+                            'theme_location' => 'footer_right',
+                            'menu_id'        => 'footerright',
+                            'menu_class'     => 's-footer__linklist',
 
-                    ));
+                        ));
                     ?>
 
                 </div> <!-- end s-footer__social -->

@@ -1,3 +1,4 @@
+
 <?php
 
 require_once(get_theme_file_path('inc/tgm.php'));
@@ -48,9 +49,9 @@ if (site_url() == "http://demo.lwhh.com") {
  	register_nav_menu("topmenu", __("Top Menu", "philosophy"));
 
     register_nav_menus(array(
-        "footer_left" => __("Footer Left Menu","philosophy"),
+        "footer_left"   => __("Footer Left Menu","philosophy"),
         "footer_middle" => __("Footer Middle Menu","philosophy"),
-        "footer_right" => __("Footer Right Menu","philosophy")
+        "footer_right"  => __("Footer Right Menu","philosophy")
     ));
 
  	add_image_size( "philosophy-home-square", 400, 400, true);
@@ -171,10 +172,10 @@ function philosophy_widgets(){
 add_action("widgets_init", "philosophy_widgets");
 
 function philosophy_search_form($form){
-    $homedir = home_url("/");
-    $label = __("Search for:","philosophy");
+    $homedir      = home_url("/");
+    $label        = __("Search for:","philosophy");
     $button_label = __("Search","philosophy");
-    $post_pt =<<<PT
+    $post_pt      =<<<PT
         <input type="hidden" name="post_type" value="post"> 
 PT;
 

@@ -17,10 +17,10 @@
 
                 <?php
                     $philosophy_arguments = array(
-                    	'post_type' => 'book',
-                    	'meta_key' => 'is_featured',
-                    	'meta_value' => true,
-                    	'posts_per_page' => 3,
+                        'post_type'      => 'book',
+                        'meta_key'       => 'is_featured',
+                        'meta_value'     => true,
+                        'posts_per_page' => 3,
                     );
 
 
