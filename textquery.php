@@ -12,12 +12,12 @@
 			array(
 				'taxonomy' => 'language',
 				'fields'   => 'slug',
-				'terms'    => array('bangla')
+				'terms'    => array('English'),
 			),
 			array(
 				'taxonomy' => 'language',
 				'fields'   => 'slug',
-				'terms'    => array('english'),
+				'terms'    => array('Bangla'),
 				'operator' => 'NOT IN'
 			),
 		)
