@@ -5,14 +5,21 @@
 	 */ 
 	
 	$philosophy_query_args = array(
-		'post_type' => 'book',
+		'post_type'      => 'book',
 		'posts_per_page' => -1,
-		'tax_query' => array(
+		'tax_query'      => array(
+			'relation' => 'AND',
 			array(
 				'taxonomy' => 'language',
-				'fields' => 'slug',
-				'terms' => array('bangla')
-			)
+				'fields'   => 'slug',
+				'terms'    => array('bangla')
+			),
+			array(
+				'taxonomy' => 'language',
+				'fields'   => 'slug',
+				'terms'    => array('english'),
+				'operator' => 'NOT IN'
+			),
 		)
 	);
 
