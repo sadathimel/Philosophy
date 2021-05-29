@@ -10,16 +10,26 @@
 		'tax_query'      => array(
 			'relation' => 'AND',
 			array(
-				'taxonomy' => 'language',
-				'fields'   => 'slug',
-				'terms'    => array('English'),
+				'relation' => 'AND',
+				array(
+					'taxonomy' => 'language',
+					'field'   => 'slug',
+					'terms'    => array('English'),
+				),
+				array(
+					'taxonomy' => 'language',
+					'field'   => 'slug',
+					'terms'    => array('Bangla'),
+					'operator' => 'NOT IN'
+				),
+
 			),
 			array(
-				'taxonomy' => 'language',
-				'fields'   => 'slug',
-				'terms'    => array('Bangla'),
-				'operator' => 'NOT IN'
-			),
+					'taxonomy' => 'genre',
+					'field'   => 'slug',
+					'terms'    => array('horror')
+				),
+			
 		)
 	);
 
