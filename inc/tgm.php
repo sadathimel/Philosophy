@@ -89,7 +89,14 @@ function philosophy_register_required_plugins() {
 		array(
 			'name'      => 'CMB2',
 			'slug'      => 'CMB2',
-			'required'  => false,
+			'required'  => true,
+			'source'	=> 'https://github.com/CMB2/CMB2/archive/refs/heads/develop.zip'
+		),
+		array(
+			'name'      => 'CodeStar',
+			'slug'      => 'codestar-framework',
+			'required'  => true,
+			'source'	=> 'https://github.com/Codestar/codestar-framework/archive/refs/heads/master.zip'
 		),
 
 		
