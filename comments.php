@@ -27,8 +27,8 @@
             	<?php 
             		the_comments_pagination(array(
             			'screen_reader_text' => __('Pagination','alpha'),
-            			'prev_text'			 =>'<' . __('Previour Comment', 'alpha'),
-            			'next_text'			 =>'>' . __('Next Comment', 'alpha'),
+            			'prev_text'		=>'<' . __('Previour Comment', 'alpha'),
+            			'next_text'	      =>'>' . __('Next Comment', 'alpha'),
             		));
             	 ?>
             </div>
