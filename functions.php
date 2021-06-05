@@ -314,3 +314,8 @@ FORM;
                   return $tag;
           }
           add_filter( 'wordcount_tag', 'philosophy_wordcunt_tag' );
+
+          function philosophy_reading_tag($tag){
+              return 'h5';
+          }
+          add_filter( 'wordcount_reading_tag', 'philosophy_reading_tag' );
