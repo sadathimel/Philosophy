@@ -301,3 +301,10 @@ function philosophy_footer_language_items( $tags ) {
  return $tags;
 }
 add_filter( 'philosophy_footer_tag_items', 'philosophy_footer_language_items' );
+
+function philosophy_wordcount_heading($heading){
+    $heading = strtoupper($heading);
+    // $heading = "Total Words";
+    return $heading;
+}
+add_filter( 'wordcount_heading', 'philosophy_wordcount_heading' );
