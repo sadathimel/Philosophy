@@ -332,3 +332,8 @@ FORM;
             return '100*100';
         }
         add_filter( 'pqrc_qrcode_dimension', 'philosopy_qrcode_dimension' );
+
+        // function philosopy_image_attributes($image_attributes){
+        //     return $image_attributes;
+        // }
+        // add_filter( 'pqrc_image_attributes', 'philosopy_image_attributes' );
