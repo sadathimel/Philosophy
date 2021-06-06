@@ -172,10 +172,10 @@
     add_action( "widgets_init", "philosophy_widgets" );
 
     function philosophy_search_form( $form ) {
-        $homedir = home_url( "/" );
-        $label = __( "Search for:", "philosophy" );
+        $homedir      = home_url( "/" );
+        $label        = __( "Search for:", "philosophy" );
         $button_label = __( "Search", "philosophy" );
-        $post_pt = <<<PT
+        $post_pt      = <<<PT
         <input type="hidden" name="post_type" value="post">
 PT;
 
@@ -266,56 +266,66 @@ FORM;
             <input type='text' name='cat_title' id='cat_title' value='<?php echo $cat_title ?>'>
             <p class='description'><?php _e( 'Title for the Category ' );?></p>
         </td>
-    </tr>          <?php
-              } );
+    </tr>
+    <?php
+        } );
 
-              function philosophy_cpt_slug_fix( $post_link, $id ) {
-                  $p = get_post( $id );
-                  if ( is_object( $p ) && 'chapter' == get_post_type( $id ) ) {
-                      $parent_post_id = get_field( 'parent_book' );
-                      $parent_post = get_post( $parent_post_id );
-                      if ( $parent_post ) {
-                          $post_link = str_replace( "%book%", $parent_post->post_name, $post_link );
-                      }
+        function philosophy_cpt_slug_fix( $post_link, $id ) {
+            $p = get_post( $id );
+            if ( is_object( $p ) && 'chapter' == get_post_type( $id ) ) {
+                $parent_post_id = get_field( 'parent_book' );
+                $parent_post    = get_post( $parent_post_id );
+                if ( $parent_post ) {
+                    $post_link = str_replace( "%book%", $parent_post->post_name, $post_link );
+                }
 
-                  }
-                  return $post_link;
-              }
-              add_filter( 'post_type_link', 'philosophy_cpt_slug_fix', 1, 2 );
+            }
+            return $post_link;
+        }
+        add_filter( 'post_type_link', 'philosophy_cpt_slug_fix', 1, 2 );
 
-              function philosophy_footer_language_heading( $title ) {
-                  if ( is_post_type_archive( 'book' ) ) {
-                      $title = __( 'Language', 'philosophy' );
-                  }
-                  return $title;
-              }
-              add_filter( 'philosophy_footer_tag_heading', 'philosophy_footer_language_heading' );
+        function philosophy_footer_language_heading( $title ) {
+            if ( is_post_type_archive( 'book' ) ) {
+                $title = __( 'Language', 'philosophy' );
+            }
+            return $title;
+        }
+        add_filter( 'philosophy_footer_tag_heading', 'philosophy_footer_language_heading' );
 
-              function philosophy_footer_language_items( $tags ) {
-                  if ( is_post_type_archive( 'book' ) ) {
-                      $tags = get_terms( [
-                          'taxonomy'   => 'language',
-                          'hide_empty' => false,
-                      ] );
-                  }
-                  return $tags;
-              }
-              add_filter( 'philosophy_footer_tag_items', 'philosophy_footer_language_items' );
+        function philosophy_footer_language_items( $tags ) {
+            if ( is_post_type_archive( 'book' ) ) {
+                $tags = get_terms( [
+                    'taxonomy'   => 'language',
+                    'hide_empty' => false,
+                ] );
+            }
+            return $tags;
+        }
+        add_filter( 'philosophy_footer_tag_items', 'philosophy_footer_language_items' );
 
-              function philosophy_wordcount_heading( $heading ) {
-                  // $heading = strtoupper($heading);
-                  $heading = "Total Words";
-                  return $heading;
-              }
-              add_filter( 'wordcount_heading', 'philosophy_wordcount_heading' );
+        function philosophy_wordcount_heading( $heading ) {
+            // $heading = strtoupper($heading);
+            $heading = "Total Words";
+            return $heading;
+        }
+        add_filter( 'wordcount_heading', 'philosophy_wordcount_heading' );
 
-              function philosophy_wordcunt_tag( $tag ) {
-                  $tag = 'h4';
-                  return $tag;
-          }
-          add_filter( 'wordcount_tag', 'philosophy_wordcunt_tag' );
+        function philosophy_wordcunt_tag( $tag ) {
+            $tag = 'h4';
+            return $tag;
+        }
+        add_filter( 'wordcount_tag', 'philosophy_wordcunt_tag' );
 
-          function philosophy_reading_tag($tag){
-              return 'h5';
-          }
-          add_filter( 'wordcount_reading_tag', 'philosophy_reading_tag' );
+        function philosophy_reading_tag( $tag ) {
+            return 'h5';
+        }
+        add_filter( 'wordcount_reading_tag', 'philosophy_reading_tag' );
+
+        function philosopy_exclude_qrcode_post_type( $post_types ) {
+            $post_types[] = 'page';
+            // array_push($post_types,'page');
+            return $post_types;
+    }
+    add_filter( 'pqrc_excluded_post_type', 'philosopy_exclude_qrcode_post_type' );
+
+    
