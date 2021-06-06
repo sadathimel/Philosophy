@@ -325,7 +325,10 @@ FORM;
             $post_types[] = 'page';
             // array_push($post_types,'page');
             return $post_types;
-    }
-    add_filter( 'pqrc_excluded_post_type', 'philosopy_exclude_qrcode_post_type' );
+        }
+        add_filter( 'pqrc_excluded_post_type', 'philosopy_exclude_qrcode_post_type' );
 
-    
+        function philosopy_qrcode_dimension( $dimension ) {
+            return '100*100';
+        }
+        add_filter( 'pqrc_qrcode_dimension', 'philosopy_qrcode_dimension' );
