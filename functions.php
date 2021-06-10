@@ -335,5 +335,13 @@ FORM;
 
         // function philosopy_image_attributes($image_attributes){
         //     return $image_attributes;
-        // }
-        // add_filter( 'pqrc_image_attributes', 'philosopy_image_attributes' );
+    // }
+    // add_filter( 'pqrc_image_attributes', 'philosopy_image_attributes' );
+
+
+    function philosophy_settings_country_list($countries){
+        array_push($countries,__("span","philosophy"));
+        $countries = array_diff($countries,array('Pakistan','India'));
+        return $countries;
+    }
+    add_filter( 'pqrc_countries', 'philosophy_settings_country_list');
