@@ -1,16 +1,16 @@
-
 <?php
 /*
 // Template Name: tinyslider
 */
-the_post(); 
-get_header(); 
+    the_post();
+    get_header();
 ?>
+
 
 
     <!-- s-content
     ================================================== -->
-    <section class="s-content s-content--narrow s-content--no-padding-bottom">
+    <section class="container s-content s-content--narrow s-content--no-padding-bottom">
 
         <article class="row format-standard">
 
@@ -19,23 +19,20 @@ get_header();
                     <?php the_title();?>
                 </h1>
             </div> <!-- end s-content__header -->
-    
+
             <div class="s-content__media col-full">
                 <div class="s-content__post-thumb">
-                    <?php the_post_thumbnail("large"); ?>                    
+                    <?php the_post_thumbnail( "large" );?>
                 </div>
             </div> <!-- end s-content__media -->
 
             <div class="col-full s-content__main">
 
-                <?php the_content(); ?>
+                <?php 
+                    the_content();
+                    wp_link_pages();
+                ?>
 
-            <div class="row block-1-2 block-tab-full">
-                <?php if (is_active_sidebar( "about-us" )) {
-                    dynamic_sidebar( "about-us" );
-                } ?>
-            </div>
-                
             </div> <!-- end s-content__main -->
 
         </article>
@@ -43,4 +40,4 @@ get_header();
     </section> <!-- s-content -->
 
 
-   <?php get_footer(); ?>
+   <?php get_footer();?>
