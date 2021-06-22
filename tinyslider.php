@@ -26,7 +26,7 @@
                 </div>
             </div> <!-- end s-content__media -->
 
-            <div class="col-full s-content__main">
+            <div class="col-full">
 
                 <?php 
                     the_content();
