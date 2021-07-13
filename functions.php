@@ -13,6 +13,8 @@
         define( "VERSION", wp_get_theme()->get( "Version" ) );
     }
 
+if (!function_exists('philosophy_after_setup_theme')) :
+
     /**
      * after setup theme.
      */
@@ -58,8 +60,12 @@
 
         add_image_size( "philosophy-home-square", 400, 400, true );
     }
-
     add_action( 'after_setup_theme', 'philosophy_after_setup_theme' );
+
+endif;
+
+
+    
 
     /**
      * Enqueue scripts and styles.
@@ -175,26 +181,20 @@
         $homedir      = home_url( "/" );
         $label        = __( "Search for:", "philosophy" );
         $button_label = __( "Search", "philosophy" );
-        $post_pt      = <<<PT
-        <input type="hidden" name="post_type" value="post">
-PT;
+        $post_pt      = sprintf( '<input type="hidden" name="post_type" value="post">');
 
         if ( is_post_type_archive( 'book' ) ) {
-            $post_type = <<<PT
-        <input type="hidden" name="post_type" value="book">
-PT;
+            $post_type = sprintf('<input type="hidden" name="post_type" value="book">');
         }
 
-        $newform = <<<FORM
-    <form role="search" method="get" class="header__search-form" action="{$homedir}">
-        <label>
-            <span class="hide-content">{$label}</span>
-            <input type="search" class="search-field" placeholder="Type Keywords" value="" name="s" title="{$label}" autocomplete="off">
-        </label>
-        {$post_type}
-        <input type="submit" class="search-submit" value="{$button_label}">
-    </form>;
-FORM;
+        $newform = sprintf( '<form role="search" method="get" class="header__search-form" action="%1$s">
+            <label>
+                <span class="hide-content">%2$s</span>
+                <input type="search" class="search-field" placeholder="Type Keywords" value="" name="s" title="%2$s" autocomplete="off">
+            </label>
+            %3%s
+            <input type="submit" class="search-submit" value="%4$s">
+        </form>', $homedir, $label, $post_type, $button_label);
         return $newform;
     }
     add_filter( 'get_search_form', 'philosophy_search_form' );
