@@ -65,8 +65,6 @@ if (!function_exists('philosophy_after_setup_theme')) :
 endif;
 
 
-    
-
     /**
      * Enqueue scripts and styles.
      */
@@ -345,3 +343,6 @@ endif;
         return $countries;
     }
     add_filter( 'pqrc_countries', 'philosophy_settings_country_list');
+
+
+    
